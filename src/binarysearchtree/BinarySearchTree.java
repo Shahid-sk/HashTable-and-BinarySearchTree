@@ -57,4 +57,28 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		int nodesRightSubtree = size(root.right);
 		return nodesLeftSubtree + nodesRightSubtree + 1;
 	}
+
+	/**
+	 * Method to search for a node in binary search tree
+	 * 
+	 * @param data
+	 * @return
+	 */
+	public boolean searchNode(T data) {
+		if (root == null) {
+			return false;
+		} else {
+			BinaryNode<T> tempNode = root;
+			while (root != null) {
+				if (data.compareTo(tempNode.data) > 0) {
+					tempNode = tempNode.right;
+				} else if (data.compareTo(tempNode.data) < 0) {
+					tempNode = tempNode.left;
+				} else {
+					return true;
+				}
+			}
+			return false;
+		}
+	}
 }
