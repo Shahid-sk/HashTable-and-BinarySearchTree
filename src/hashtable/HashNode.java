@@ -2,14 +2,15 @@ package hashtable;
 
 import java.util.Objects;
 
-public class HashNode {
+public class HashNode 
+{
 	String key;
 	Integer value;
 	HashNode next;
 
-	// Generating constructor
+	//Generating constructor
 	public HashNode(String key, Integer value, HashNode next) {
-		super();
+		super(); 
 		this.key = key;
 		this.value = value;
 		this.next = next;
